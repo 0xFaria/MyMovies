@@ -12,10 +12,9 @@ app.get("/",(req,res)=> {
 
 app.post("/user/create", UserController.create)
 
-app.post("/movie/:id/create")
-
-
-app.get("/user/:id/movies")
+// app.post("/movie/:id/create")
+// Filme por Id
+app.get("/movie", RequestController.searchById)
 // Consulta a API
 app.get("/search",RequestController.basicSearch)
 
