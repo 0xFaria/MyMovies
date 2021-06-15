@@ -19,6 +19,15 @@ class User {
      }
   }
 
+  async findByEmail(email) {
+    let user = await knex("users").where({email: email})
+    if(user) {
+      return user
+    } else {
+      return false
+    }
+  }
+
   async findUserMovies(id) {
     let movies = await knex.select("*").from("movies").where({user_id : id})
     return movies
