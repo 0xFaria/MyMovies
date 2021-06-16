@@ -29,7 +29,7 @@ class User {
   }
 
   async findUserMovies(id) {
-    let movies = await knex.select("*").from("movies").where({user_id : id})
+    let movies = await knex("movies").where({user_id: id})
     return movies
   }
 }

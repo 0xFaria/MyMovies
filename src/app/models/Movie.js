@@ -15,6 +15,16 @@ class Movie {
       return false
     }
   }
+
+  // async moviesByUser(userId) {
+  //   try {
+  //     const userMovies = await knex.select("*").from("movies").where({userId})
+  //     return userMovies
+  //   } catch (err) {
+  //     console.log(err)
+  //     return false
+  //   }
+  // }
 }
 
 module.exports = new Movie()

@@ -1,3 +1,4 @@
+const { findUserMovies } = require("../models/User")
 const User = require("../models/User")
 
 class UserController {
@@ -14,10 +15,12 @@ class UserController {
   }
 
   async findUserMovies(req,res) {
-    let {id} = req.body.id
+    let id= req.userId
     let movies = await User.findUserMovies(id)
     res.json(movies)
   }
 }
+
+
 
 module.exports = new UserController()

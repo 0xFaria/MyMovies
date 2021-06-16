@@ -37,4 +37,4 @@ class RequestController {
   }
 }
 
-module.exports = new RequestController()
+module.exports = new RequestController() 

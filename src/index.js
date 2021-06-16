@@ -23,7 +23,7 @@ app.use(auth)
 app.get("/movie", RequestController.addById)
 // Consulta a API
 app.get("/search",RequestController.basicSearch)
-
+app.get("/user/movies", UserController.findUserMovies)
 app.listen(3333,()=> {
   console.log("Server running")
 })
